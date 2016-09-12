@@ -1,0 +1,2 @@
+# RecyclerAdapter
+BaseAdapter for RecyclerView
