@@ -1,0 +1,29 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:2.2.0-rc2'
+  }
+}
+
+allprojects {
+  repositories {
+    jcenter()
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
+
+ext.versions = [COMPILE_SDK    : 24,
+                MIN_SDK        : 15,
+                TARGET_SDK     : 24,
+                BUILD_TOOLS    : "23.0.3",
+                KOTLIN         : "1.0.3",
+                ANDROID_SUPPORT: "24.2.0",
+                JUNIT          : "4.12",
+                MOCKITO_KOTLIN : "0.6.0",
+                ROBOLECTRIC    : "3.1.2",
+                ASSERT_J       : "2.5.0"]

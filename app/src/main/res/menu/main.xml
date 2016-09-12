@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+      android:id="@+id/set_items"
+      android:title="@string/set_items"
+      />
+  <item
+      android:id="@+id/add_items"
+      android:title="@string/add_items"
+      />
+  <item
+      android:id="@+id/add_item"
+      android:title="@string/add_item"
+      />
+  <item
+      android:id="@+id/clear_items"
+      android:title="@string/clear_items"
+      />
+</menu>

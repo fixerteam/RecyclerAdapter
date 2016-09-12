@@ -1,0 +1,9 @@
+<resources>
+  <string name="app.name">RecyclerAdapter</string>
+  <string name="item.title">Item title</string>
+  <string name="item.description">Item description</string>
+  <string name="set_items">Set items</string>
+  <string name="add_items">Add items</string>
+  <string name="add_item">Add item</string>
+  <string name="clear_items">Clear items</string>
+</resources>

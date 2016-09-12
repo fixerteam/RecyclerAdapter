@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion versions.COMPILE_SDK
+  buildToolsVersion versions.BUILD_TOOLS
+
+  defaultConfig {
+    minSdkVersion versions.MIN_SDK
+    targetSdkVersion versions.TARGET_SDK
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+    test.java.srcDirs += 'src/test/kotlin'
+    androidTest.java.srcDirs += 'src/androidTest/kotlin'
+  }
+}
+
+dependencies {
+  compile "com.android.support:appcompat-v7:$versions.ANDROID_SUPPORT"
+  compile "com.android.support:recyclerview-v7:$versions.ANDROID_SUPPORT"
+  compile "org.jetbrains.kotlin:kotlin-stdlib:$versions.KOTLIN"
+
+  testCompile "junit:junit:$versions.JUNIT"
+  testCompile "com.nhaarman:mockito-kotlin:$versions.MOCKITO_KOTLIN"
+  testCompile "org.robolectric:robolectric:$versions.ROBOLECTRIC"
+  testCompile "org.assertj:assertj-core:$versions.ASSERT_J"
+}
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.KOTLIN"
+  }
+}
